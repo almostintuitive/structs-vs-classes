@@ -9,11 +9,15 @@
 import Foundation
 
 
-struct NumberStruct: Comparable {
+struct NumberStruct: Comparable, Hashable {
   
   var index: Int?
   var number: Int?
   var text: String?
+  
+  var hashValue: Int {
+    return index!
+  }
   
 }
 

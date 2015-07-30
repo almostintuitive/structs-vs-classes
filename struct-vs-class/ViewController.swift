@@ -24,24 +24,24 @@ class ViewController: UIViewController {
     let size = 50000
     
     let resultStructInsert = Test.measureCreatingStructs(size: size, method: Test.ArrayOperation.InsertAtBeginning)
-    results.append(TestResult(name: "Creating an array (\(size) items) of structs by inserting items at the beginning", result: resultStructInsert.time))
+    results.append(TestResult(name: "STRUCTS: Creating an array (\(size) items) by inserting items at zero index", result: resultStructInsert.time))
     
     let resultStructAppend = Test.measureCreatingStructs(size: size, method: Test.ArrayOperation.Append)
-    results.append(TestResult(name: "Creating an array (\(size) items) of structs by appending items", result: resultStructAppend.time))
+    results.append(TestResult(name: "STRUCTS: Create array (\(size) items) of classes by appending items", result: resultStructAppend.time))
 
     let resultStructSort = Test.measureSort(resultStructAppend.array)
-    results.append(TestResult(name: "Sorting an array (\(size) items) of structs", result: resultStructSort.time))
+    results.append(TestResult(name: "STRUCTS: Sorting", result: resultStructSort.time))
 
 
     
     let resultClassInsert = Test.measureCreatingClasses(size: size, method: Test.ArrayOperation.InsertAtBeginning)
-    results.append(TestResult(name: "Creating an array (\(size) items) of classes by inserting items at the beginning", result: resultClassInsert.time))
+    results.append(TestResult(name: "CLASSES: Create array (\(size) items) by inserting items at zero index", result: resultClassInsert.time))
     
     let resultClassAppend = Test.measureCreatingClasses(size: size, method: Test.ArrayOperation.Append)
-    results.append(TestResult(name: "Creating an array (\(size) items) of classes by appending items", result: resultClassAppend.time))
+    results.append(TestResult(name: "CLASSES: Create array (\(size) items) of classes by appending items", result: resultClassAppend.time))
     
     let resultClassSort = Test.measureSort(resultClassAppend.array)
-    results.append(TestResult(name: "Sorting an array (\(size) items) of classes:", result: resultClassSort.time))
+    results.append(TestResult(name: "CLASSES: Sorting", result: resultClassSort.time))
     
   }
 }

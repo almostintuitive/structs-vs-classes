@@ -8,12 +8,15 @@
 
 import Foundation
 
-final class NumberClass: Comparable {
+final class NumberClass: Comparable, Hashable {
   
   var index: Int?
   var number: Int?
   var text: String?
   
+  var hashValue: Int {
+    return index!
+  }
 }
 
 func ==(lhs: NumberClass, rhs: NumberClass) -> Bool {
