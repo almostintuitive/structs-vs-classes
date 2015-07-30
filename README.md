@@ -12,5 +12,7 @@ Reason?
 Copying all the data every time the array changes?
 Or? What's your guess?:)
 
+(Compiler optimization: -Os)
+
 ![Alt text](Result.png?raw=true "Result")
 
